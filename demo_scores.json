@@ -1,0 +1,44 @@
+[
+  {
+    "expected": "scam",
+    "score": 0.9623,
+    "verdict": "SCAM",
+    "correct": true,
+    "text": "URGENT: Your bank account has been locked. Verify your identity now at http://secure-bank-login.net or your funds will be frozen within 24 hours."
+  },
+  {
+    "expected": "scam",
+    "score": 0.9892,
+    "verdict": "SCAM",
+    "correct": true,
+    "text": "Congratulations! You've won a $1,000 Amazon gift card. Click here to claim your prize before it expires today: bit.ly/claim-now"
+  },
+  {
+    "expected": "scam",
+    "score": 0.9073,
+    "verdict": "SCAM",
+    "correct": true,
+    "text": "Hi Grandma, it's me, I lost my phone and I need $500 for a new one. Please send it by gift card, and don't tell Mom and Dad."
+  },
+  {
+    "expected": "legit",
+    "score": 0.2646,
+    "verdict": "SAFE",
+    "correct": true,
+    "text": "Hi, this is Dr. Patel's office reminding you of your appointment tomorrow at 10:30 AM. Reply YES to confirm or call 555-0142 to reschedule."
+  },
+  {
+    "expected": "legit",
+    "score": 0.0606,
+    "verdict": "SAFE",
+    "correct": true,
+    "text": "Hi Mom, I'm running late, I'll be home around 7. Can you save me some dinner? Love, Sarah"
+  },
+  {
+    "expected": "legit",
+    "score": 0.3092,
+    "verdict": "SAFE",
+    "correct": true,
+    "text": "Your package is out for delivery and will arrive today by 8 PM. Track it here: usps.com/track/940011189"
+  }
+]
