@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SafeText — Is this message a scam?</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>SafeText</h1>
+    <p class="tagline">Paste a suspicious text message. Find out if it is likely a scam — in plain language.</p>
+    <p class="sub">Made for everyone, especially older adults. No account. Nothing you paste leaves your device — the check runs entirely in your browser.</p>
+  </header>
+
+  <section class="checker">
+    <label for="msg">The message you received</label>
+    <textarea id="msg" rows="5" placeholder="Paste the text message here…"></textarea>
+    <div class="actions">
+      <button id="check" class="primary">Check this message</button>
+      <button id="clear" class="ghost">Clear</button>
+    </div>
+
+    <p class="examples-label">Try one of these examples:</p>
+    <div class="examples" id="examples"></div>
+
+    <div id="result" class="result hidden" aria-live="polite">
+      <div id="verdict" class="verdict"></div>
+      <div class="meter"><div id="meterfill" class="meterfill"></div></div>
+      <p id="score" class="score"></p>
+      <h2>Why the checker thinks so</h2>
+      <ul id="reasons" class="reasons"></ul>
+      <h2>Words that raised the score</h2>
+      <ul id="features" class="features"></ul>
+      <h2>What to do now</h2>
+      <p id="advice" class="advice"></p>
+      <p class="disclaimer">This is a helper, not a guarantee. Scammers change their words. When in doubt, call the company or person using a number you already know — never a number from the message.</p>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>How it works</h2>
+    <p>SafeText uses a machine-learning model (TF-IDF + logistic regression) trained on <strong>24,161 real and published example messages</strong> — the UCI SMS Spam Collection (Almeida et al., 2011) and the Scam Shield SMS dataset (Hugging Face, CC-BY-4.0). The model learned which words and phrases appear in scams, and it shows you exactly which words pushed the score up.</p>
+    <ul>
+      <li><strong>Held-out test (4,833 messages it never saw while training):</strong> accuracy 93.3%, precision 94.4%, recall 92.2%.</li>
+      <li><strong>Independent check (1,510 more messages, never trained on):</strong> accuracy 95.2%, precision 99.2%, recall 93.9%.</li>
+      <li><strong>What it is bad at:</strong> scams that read like an ordinary family message are the hardest — it caught 6 out of 6 of our demo examples, but a brand-new scam wording can still slip through. It only works in English.</li>
+      <li><strong>Privacy:</strong> the trained model is a file shipped with this page. Your message never goes to a server.</li>
+    </ul>
+    <p class="sources">Datasets: UCI Machine Learning Repository, “SMS Spam Collection” (DOI 10.24432/C5CC84); Hugging Face, “rasheq/scam-shield-sms” (CC-BY-4.0). Built for SLAY HACKS 2026.</p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
